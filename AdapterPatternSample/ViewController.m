@@ -14,6 +14,7 @@
 
 /**
  *  适配器模式的简单运用
+ *  本例参考自YouXianMing大师而完成,感谢对此做出的贡献,源码只做备份使用
  */
 @interface ViewController ()
 
