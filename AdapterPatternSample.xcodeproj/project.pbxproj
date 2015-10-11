@@ -13,6 +13,10 @@
 		12D937241BCA3099004A581C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937221BCA3099004A581C /* Main.storyboard */; };
 		12D937261BCA3099004A581C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D937251BCA3099004A581C /* Assets.xcassets */; };
 		12D937291BCA3099004A581C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937271BCA3099004A581C /* LaunchScreen.storyboard */; };
+		12D937341BCA3233004A581C /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937331BCA3233004A581C /* CardView.m */; settings = {ASSET_TAGS = (); }; };
+		12D937371BCA3554004A581C /* BaseCardAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937361BCA3554004A581C /* BaseCardAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		12D9373A1BCA36DB004A581C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937391BCA36DB004A581C /* Card.m */; settings = {ASSET_TAGS = (); }; };
+		12D9373D1BCA3720004A581C /* CustomCardAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D9373C1BCA3720004A581C /* CustomCardAdapter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		12D937251BCA3099004A581C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12D937281BCA3099004A581C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12D9372A1BCA3099004A581C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D937311BCA31CC004A581C /* CardAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardAdapterProtocol.h; sourceTree = "<group>"; };
+		12D937321BCA3233004A581C /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		12D937331BCA3233004A581C /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		12D937351BCA3554004A581C /* BaseCardAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCardAdapter.h; sourceTree = "<group>"; };
+		12D937361BCA3554004A581C /* BaseCardAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCardAdapter.m; sourceTree = "<group>"; };
+		12D937381BCA36DB004A581C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		12D937391BCA36DB004A581C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		12D9373B1BCA3720004A581C /* CustomCardAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardAdapter.h; sourceTree = "<group>"; };
+		12D9373C1BCA3720004A581C /* CustomCardAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,7 @@
 				12D9371D1BCA3099004A581C /* AppDelegate.m */,
 				12D9371F1BCA3099004A581C /* ViewController.h */,
 				12D937201BCA3099004A581C /* ViewController.m */,
+				12D937301BCA3176004A581C /* adapter */,
 				12D937221BCA3099004A581C /* Main.storyboard */,
 				12D937251BCA3099004A581C /* Assets.xcassets */,
 				12D937271BCA3099004A581C /* LaunchScreen.storyboard */,
@@ -77,6 +91,22 @@
 				12D9371A1BCA3099004A581C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12D937301BCA3176004A581C /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				12D937311BCA31CC004A581C /* CardAdapterProtocol.h */,
+				12D937351BCA3554004A581C /* BaseCardAdapter.h */,
+				12D937361BCA3554004A581C /* BaseCardAdapter.m */,
+				12D9373B1BCA3720004A581C /* CustomCardAdapter.h */,
+				12D9373C1BCA3720004A581C /* CustomCardAdapter.m */,
+				12D937381BCA36DB004A581C /* Card.h */,
+				12D937391BCA36DB004A581C /* Card.m */,
+				12D937321BCA3233004A581C /* CardView.h */,
+				12D937331BCA3233004A581C /* CardView.m */,
+			);
+			name = adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D9373D1BCA3720004A581C /* CustomCardAdapter.m in Sources */,
 				12D937211BCA3099004A581C /* ViewController.m in Sources */,
 				12D9371E1BCA3099004A581C /* AppDelegate.m in Sources */,
+				12D937341BCA3233004A581C /* CardView.m in Sources */,
+				12D937371BCA3554004A581C /* BaseCardAdapter.m in Sources */,
 				12D9371B1BCA3099004A581C /* main.m in Sources */,
+				12D9373A1BCA36DB004A581C /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
